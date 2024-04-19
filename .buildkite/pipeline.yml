@@ -1,6 +1,6 @@
 steps:
   - label: "node setup"
-    command: "node -v && npm install && npm list"
+    command: "node -v && npm install && npm list && ls"
     key: build
 
   - label: ":test_tube: Test"
