@@ -1,0 +1,9 @@
+steps:
+  - label: "node setup"
+    command: "node -v && npm install && ls"
+    key: build
+
+  - label: ":test_tube: Test"
+    command: "npm test"
+    key: test
+    depends_on: build
