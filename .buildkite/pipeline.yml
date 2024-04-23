@@ -1,9 +1,6 @@
 steps:
-  - label: "node setup"
-    command: "node -v && npm install && npm list && ls"
-    key: build
-
-  - label: ":test_tube: Test"
-    command: "npm i && npm test"
+  - label: "Test"
+    commands:
+    - "npm i"
+    - "npx wdio conf/test.conf.js"
     key: test
-    depends_on: build
