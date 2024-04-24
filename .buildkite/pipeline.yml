@@ -2,5 +2,5 @@ steps:
   - label: "Test"
     commands:
     - "npm i"
-    - "npx wdio conf/test.conf.js"
+    - "npx wdio conf/local-test.conf.js"
     key: test
