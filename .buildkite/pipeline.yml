@@ -2,5 +2,4 @@ steps:
   - label: "Local test"
     commands:
     - "node -v"
-    - wget https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip
     key: "local test"
