@@ -2,5 +2,6 @@ steps:
   - label: "Local_test"
     commands:
       - "node -v"
+      - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
       - "npm i"
     key: "local_test"
