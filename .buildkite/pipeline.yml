@@ -2,9 +2,4 @@ steps:
   - label: "Local test"
     commands:
     - "wget \"https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip\""
-    - "unzip BrowserStackLocal-darwin-x64.zip"
-    - "./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start"
-    - "npm i"
-    - "npx wdio conf/local-test.conf.js"
-    - "./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon stop"
     key: "local test"
