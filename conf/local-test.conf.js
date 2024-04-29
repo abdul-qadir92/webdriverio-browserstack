@@ -6,11 +6,11 @@ const localConfig = {
     [
       'browserstack',
       { 
-        browserstackLocal: true, 
-        buildIdentifier: '#${BUILD_NUMBER}', 
+        browserstackLocal: false,
+        buildIdentifier: '#${BUILD_NUMBER}',
         opts: { 
           forcelocal: false, 
-          localIdentifier: 'webdriverio-browserstack-repo' 
+          //localIdentifier: 'webdriverio-browserstack-repo'
         } 
       },
     ],
