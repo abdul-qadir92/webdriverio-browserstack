@@ -1,5 +1,6 @@
 steps:
   - label: "Local test"
     commands:
-    - "node -v"
+      - "node -v"
+      - "npm i"
     key: "local test"
