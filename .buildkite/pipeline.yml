@@ -1,7 +1,8 @@
 steps:
-  - command: wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
-  - wait
-  - command: unzip BrowserStackLocal-darwin-x64.zip
+  - commands:
+    - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+    - sleep 5
+    - unzip BrowserStackLocal-darwin-x64.zip
   - wait
   - command: ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
   - wait
