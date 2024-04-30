@@ -1,13 +1,8 @@
 steps:
   - commands:
     - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-darwin-x64.zip"
-    - sleep 5
     - unzip BrowserStackLocal-darwin-x64.zip
-  - wait
-  - command: ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
-  - wait
-  - commands:
+    - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
     - npm i
     - npx wdio conf/local-test.conf.js
-  - wait
-  - command: ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
+    - ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
