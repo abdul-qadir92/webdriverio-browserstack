@@ -1,21 +1,16 @@
 steps:
   - label: "Local_downlaod"
     command: wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
-    wait:
-    key: "Local_downlaod"
+  - wait
   - label: "Local_extract"
     command: unzip BrowserStackLocal-darwin-x64.zip
-    wait:
-    key: "Local_extract"
+  - wait
   - label: "Local_start"
     command: ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
-    wait:
-    key: "Local_start"
+  - wait
   - label: "Local_test"
     commands:
       - npm i
       - npx wdio conf/local-test.conf.js
-    key: "Local_test"
   - label: "Local_stop"
     command: ./BrowserStackLocal --key $BROWSERSTACK_ACCESS_KEY --daemon start
-    key: "Local_stop"
