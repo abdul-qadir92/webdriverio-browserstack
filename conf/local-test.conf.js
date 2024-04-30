@@ -21,7 +21,8 @@ const localConfig = {
       browserVersion: 'latest',
       'bstack:options': {
         buildName: 'browserstack build',
-        source: 'webdriverio:sample-master:v1.2'
+        source: 'webdriverio:sample-master:v1.2',
+        local: true
       }
     },
   ],
